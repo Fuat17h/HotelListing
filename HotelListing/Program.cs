@@ -15,7 +15,7 @@ namespace HotelListing
     {
         public static void Main(string[] args)
         {
-
+            //fuat: serilog
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.File(
                 path: "C:\\Users\\FUAD\\source\\repos\\HotelListing\\HotelListing\\logs\\log-.txt",
@@ -45,7 +45,7 @@ namespace HotelListing
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseSerilog()
+                .UseSerilog() // fuat: use serilog
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
